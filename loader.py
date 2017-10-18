@@ -48,6 +48,7 @@ def main():
                 print('{:5}: {}'.format(i + 1, sample_id))
 
                 db.execute(insert, (sample_id, json.dumps(vals)))
+                db.commit()
 
         print('Done.')
 
